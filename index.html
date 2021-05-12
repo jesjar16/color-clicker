@@ -16,14 +16,14 @@
           }
           $(document).ready(function(){
              $('#large_box').click(function(){
-                alert('you clicked the big box!');  
+                // alert('you clicked the big box!');  
                 $('#large_box').css("background-color",random_color());
                 $('#large_box').children().css("background-color",random_color());
-         //comenta esto cuando hayas averiguado para qué se utiliza event.stopPropagation 
+                //comenta esto cuando hayas averiguado para qué se utiliza event.stopPropagation 
              })
              $('.side_box').click(function(event){
                 event.stopPropagation();
-                $('.side_box').siblings().css("background-color",random_color());
+                $(this).siblings().css("background-color",random_color());
              })
              $('.middle_box').click(function(event){
                 event.stopPropagation();
